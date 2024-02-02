@@ -22,7 +22,7 @@ pipeline {
         stage("Sync with S3") {
             steps {
                 withCredentials([aws(credentialsId: "aws creds",  accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                     sh 'aws s3 sync ./build s3://react-hosting-test'
+                     sh 'aws s3 sync ./build s3://react-hosting-test-2'
                 } 
                 echo 'Sync success.'
             }
