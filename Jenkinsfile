@@ -27,7 +27,7 @@ pipeline {
         stage("Sync with S3") {
             steps {
                 sh 'aws configure list'
-                sh 'aws s3 sync ./build s3://react-hosting-test'
+                sh 'aws s3 sync ./build s3://react-hosting-test-2'
                 echo 'Sync success.'
             }
         }
